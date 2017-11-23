@@ -32,9 +32,10 @@
                 </thead>
                 <tbody :class="fullTableBodyClass">
                 <table-row
-                        v-for="row in displayedRows"
+                        v-for="(row, index) in displayedRows"
                         :key="row.vueTableComponentInternalRowId"
                         :row="row"
+						:index="index"
                         :columns="columns"
 						:class="fullTableRowClass(row)"
 						@rowClick="emitRowClick"
